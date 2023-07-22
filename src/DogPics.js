@@ -7,13 +7,14 @@ function DogPics() {
 
   useEffect(() => {
     console.log("useEffect");
+    }, []);
     fetch("https://dog.ceo/api/breeds/image/random/3")
       .then((r) => r.json())
       .then((data) => {
         console.log("setState");
         setImages(data.message);
       });
-  });
+ 
 
   console.log("render");
 
